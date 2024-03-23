@@ -6,3 +6,13 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+.router-link-active {
+    color: "#ED8000" !important;
+}
+
+.testimonial_shadow {
+    -webkit-box-shadow: 0px 3px 9px 1px rgba(237,128,0,1);
+    -moz-box-shadow: 0px 3px 9px 1px rgba(237,128,0,1);
+    box-shadow: 0px 3px 9px 1px rgba(237,128,0,1);
+}

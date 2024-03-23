@@ -1,8 +1,6 @@
 <script setup>
 import headerBg from '@/assets/images/header.png'
 import lineImg from '@/assets/images/line6.svg'
-import profileU from '@/assets/images/ProfileU.png'
-import Rectangle35 from '@/assets/images/Rectangle35.png'
 
 </script>
 
@@ -21,7 +19,7 @@ import Rectangle35 from '@/assets/images/Rectangle35.png'
       </p>
       <div class="w-full mt-10 flex flex-wrap gap-5 font-semibold">
         <router-link to="/" class="text-primary">Home</router-link>
-        <router-link to="/bout" class="text-white hover:text-primary">About me</router-link>
+        <router-link to="/about" class="text-white hover:text-primary">About me</router-link>
         <router-link to="/" class="text-white hover:text-primary">Resume</router-link>
         <router-link to="/" class="text-white hover:text-primary">Services</router-link>
         <router-link to="/" class="text-white hover:text-primary">Contact</router-link>
@@ -38,42 +36,4 @@ import Rectangle35 from '@/assets/images/Rectangle35.png'
       <h1 class="text-white font-bold">Designed by <span class="text-primary">Nnah Linzy</span></h1>
     </div>
   </section>
-
-  <!-- <section class="container mt-10 flex flex-col justify-center items-center">
-    <h1 class="text-[#4E018B] font-bold text-2xl uppercase text-center">INNOVATION AND ME</h1>
-    <div class="flex items-start w-[70%] mt-5">
-      <div class="w-1/2">
-        <div class="">
-          <img :src="profileU" alt="" class="h-[400px]">
-        </div>
-      </div>
-      <div class="w-1/2 pt-16">
-        <p class="text-[#4E018B] text-lg font-roboto">
-          Unlock the door to creativity and innovation. Connect with me now to discuss how we can elevate your projects to new 
-          heights!
-        </p>
-        <div class="mt-10">
-          <a href="#" class="py-2 px-3 rounded-[20px] text-[#4E018B] border border-[#4E018B] font-bold">Connect</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section
-  :style="{ backgroundImage: `url(${Rectangle35})` }" 
-   class=" mt-10 py-20 px-20 bg-cover bg-center bg-no-repeat relative mb-10"
-  >
-    <div value="">
-      <p class="text-white w-[300px] font-roboto text-xl leading-10">
-        From Flyers to Website to Mobile Apps to Dashboards, you name it, I <span class="text-[#ED8000]">Design</span> it.
-      </p>
-
-      <div class="mt-8">
-        <div class="inline-block align-middle">
-          <router-link to="" class="text-white font-roboto text-xl">Resume</router-link>
-          <hr class="w-full">
-        </div>
-      </div>
-    </div>
-  </section> -->
 </template>
