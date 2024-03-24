@@ -13,7 +13,7 @@ import Footer from './components/Footer.vue';
       <RouterView />
     </div>
 
-    <Footer v-if="$route.name != 'home'" class="w-full" />
+    <Footer v-if="$route.name !== 'home' && $route.name !== 'resume'" class="w-full" />
 
   </div>
 </template>
