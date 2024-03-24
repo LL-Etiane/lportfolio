@@ -11,9 +11,9 @@ import lineImg from '@/assets/images/line6.svg'
     <div class="w-full md:w-[600px]">
       <div class="text-white text-6xl font-montserrat">
         <h1>Hi! I’m Linzy, UI UX</h1>
-        <h1 class="text-[#ED8000] mt-2">Designer</h1>
+        <h1 class="text-[#ED8000] mt-3">Designer</h1>
       </div>
-      <img :src="lineImg" alt="" class="mt-2">
+      <img :src="lineImg" alt="" class="mt-4">
       <p class="text-white mt-2 font-montserrat font-semibold text-xl">
         I’m a professional Graphics / UI UX Designer with a zeal to transform ideas to reality. Test my skills and find out.
       </p>
@@ -29,6 +29,7 @@ import lineImg from '@/assets/images/line6.svg'
         <a href="https://www.linkedin.com/in/nnah-linzy-b7228020a/" class="block"><i class="fa-brands fa-linkedin fa-lg"></i></a>
         <a href="https://web.facebook.com/nnah.linzy.5/?_rdc=1&_rdr" class="block"><i class="fa-brands fa-facebook fa-lg"></i></a>
         <a href="https://www.instagram.com/linzynnah/" class="block"><i class="fa-brands fa-instagram fa-lg"></i></a>
+        <a href="mailto:Nnahlinzy01@gmail.com" class="block"><i class="fa-solid fa-envelope fa-lg"></i></a>
       </div>
     </div>
 

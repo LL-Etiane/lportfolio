@@ -12,7 +12,7 @@ const submit = () => {
         alert('Please fill in all fields')
         return
     }
-    
+
 }
 
 </script>
@@ -55,6 +55,7 @@ const submit = () => {
                                         class="fa-brands fa-facebook fa-lg"></i></a>
                                 <a href="https://www.instagram.com/linzynnah/" class="block"><i
                                         class="fa-brands fa-instagram fa-lg"></i></a>
+                                <a href="mailto:Nnahlinzy01@gmail.com" class="block"><i class="fa-solid fa-envelope fa-lg"></i></a>
                             </div>
                         </div>
                     </div>

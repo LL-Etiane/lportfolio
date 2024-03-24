@@ -10,10 +10,32 @@ import Footer from './components/Footer.vue';
     <NavBar v-if="$route.name != 'home'" />
 
     <div class="flex-grow">
-      <RouterView />
+      <router-view v-slot="{ Component }">
+        <transition name="route" mode="out-in">
+          <component :is="Component"></component>
+        </transition>
+      </router-view>
     </div>
 
     <Footer v-if="$route.name !== 'home' && $route.name !== 'resume' && $route.name !== 'services'" class="w-full" />
 
   </div>
 </template>
+
+<style>
+/* route transitions */
+.route-enter-from {
+  opacity: 0;
+  transform: translateX(100px);
+}
+.route-enter-active {
+  transition: all 0.3s ease-out; 
+}
+.route-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.route-leave-active {
+  transition: all 0.3s ease-in; 
+}
+</style>

@@ -13,11 +13,11 @@ const education = ref([
 </script>
 <template>
     <div class="relative">
-        <header :style="{ backgroundImage: `url(${headerBg})` }" class="min-h-[70vh] md:min-h-[50vh] bg-cover bg-center bg-no-repeat">
+        <header :style="{ backgroundImage: `url(${headerBg})` }" class="min-h-[70vh] md:min-h-[60vh] bg-fixed bg-cover bg-center bg-no-repeat">
         </header>
         <div class="absolute top-2 w-full">
-            <div class="px-3 md:px-10">
-                <section class="bg-black text-white w-full py-3 px-5 rounded-lg">
+            <div class="px-3 md:px-36">
+                <section class="bg-black bg-opacity-80 text-white w-full py-3 px-5 rounded-lg">
                     <div class="flex flex-col justify-center items-center">
                         <h1 class="text-primary font-bold text-2xl text-center uppercase">Resume</h1>
                         <hr class="text-primary bg-primary h-1 w-10 text-center">

@@ -7,8 +7,8 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.router-link-active {
-    color: "#ED8000" !important;
+.router-link-active, .router-link-exact-active {
+    color: #ED8000 !important;
 }
 
 .testimonial_shadow {
