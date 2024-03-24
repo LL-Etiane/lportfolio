@@ -13,16 +13,16 @@ const education = ref([
 </script>
 <template>
     <div class="relative">
-        <header :style="{ backgroundImage: `url(${headerBg})` }" class="min-h-[50vh] bg-cover bg-center bg-no-repeat">
+        <header :style="{ backgroundImage: `url(${headerBg})` }" class="min-h-[70vh] md:min-h-[50vh] bg-cover bg-center bg-no-repeat">
         </header>
         <div class="absolute top-2 w-full">
-            <div class="px-10">
+            <div class="px-3 md:px-10">
                 <section class="bg-black text-white w-full py-3 px-5 rounded-lg">
                     <div class="flex flex-col justify-center items-center">
                         <h1 class="text-primary font-bold text-2xl text-center uppercase">Resume</h1>
                         <hr class="text-primary bg-primary h-1 w-10 text-center">
                     </div>
-                    <p class="text-center mt-10 px-20">
+                    <p class="text-center mt-10 px-5 md:px-20">
                         Here is a little summary about my qualification but these qualifications are only what is on
                         paper
                         for I possess more than they say. And if you do not believe me, I am up for a trial.
