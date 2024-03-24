@@ -7,13 +7,13 @@ import Footer from './components/Footer.vue';
 <template>
   <div class="flex flex-col min-h-screen">
 
-    <NavBar v-if="$route.name != 'home'"/>
+    <NavBar v-if="$route.name != 'home'" />
 
     <div class="flex-grow">
       <RouterView />
     </div>
 
-    <Footer v-if="$route.name !== 'home' && $route.name !== 'resume'" class="w-full" />
+    <Footer v-if="$route.name !== 'home' && $route.name !== 'resume' && $route.name !== 'services'" class="w-full" />
 
   </div>
 </template>
