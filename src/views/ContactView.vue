@@ -1,10 +1,12 @@
 <script setup>
 import { ref } from 'vue'
+import emailjs from '@emailjs/browser'
 
 const name = ref('')
 const email = ref('')
 const subject = ref('')
 const message = ref('')
+const isLoading = ref(false)
 
 const submit = () => {
     // validate form
@@ -12,6 +14,29 @@ const submit = () => {
         alert('Please fill in all fields')
         return
     }
+
+    isLoading.value = true
+    emailjs.send('service_5lh20kn', 'template_ukxzeo7',
+        {
+            from_name: name.value,
+            from_email: email.value,
+            subject: subject.value,
+            message: message.value
+        },
+        {
+            publicKey: 'UqbJPWn5ogcLShDX_'
+        })
+        .then((result) => {
+            alert('Message sent successfully')
+            name.value = ''
+            email.value = ''
+            subject.value = ''
+            message.value = ''
+        }, (error) => {
+            alert('An error occurred, Please try again')
+        }).finally(() => {
+            isLoading.value = false
+        })
 
 }
 
@@ -55,20 +80,27 @@ const submit = () => {
                                         class="fa-brands fa-facebook fa-lg"></i></a>
                                 <a href="https://www.instagram.com/linzynnah/" class="block"><i
                                         class="fa-brands fa-instagram fa-lg"></i></a>
-                                <a href="mailto:Nnahlinzy01@gmail.com" class="block"><i class="fa-solid fa-envelope fa-lg"></i></a>
+                                <a href="mailto:Nnahlinzy01@gmail.com" class="block"><i
+                                        class="fa-solid fa-envelope fa-lg"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <form action="" class="mt-10">
-                    <input type="text" name="name" id="name" placeholder="Your Name" v-model="name" class="w-full py-4 px-5 bg-primary bg-opacity-10 rounded-md my-3" required>
-                    <input type="email" name="email" id="email" placeholder="Your Email" v-model="email" class="w-full py-4 px-5 bg-primary bg-opacity-10 rounded-md my-3" required>
-                    <input type="text" name="subject" id="subject" placeholder="Subject" v-model="subject" class="w-full py-4 px-5 bg-primary bg-opacity-10 rounded-md my-3" required>
-                    <textarea name="message" id="message" cols="15" rows="10" placeholder="Message" v-model="message" class="w-full py-4 px-5 bg-primary bg-opacity-10 rounded-md my-3" required></textarea>
+                <form v-on:submit.prevent="submit" class="mt-10">
+                    <input type="text" name="name" id="name" placeholder="Your Name" v-model="name"
+                        class="w-full py-4 px-5 bg-primary bg-opacity-10 rounded-md my-3" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" v-model="email"
+                        class="w-full py-4 px-5 bg-primary bg-opacity-10 rounded-md my-3" required>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" v-model="subject"
+                        class="w-full py-4 px-5 bg-primary bg-opacity-10 rounded-md my-3" required>
+                    <textarea name="message" id="message" cols="15" rows="10" placeholder="Message" v-model="message"
+                        class="w-full py-4 px-5 bg-primary bg-opacity-10 rounded-md my-3" required></textarea>
 
                     <div class="flex justify-end">
-                        <button type="submit" class="bg-primary text-white font-bold py-2 px-5 rounded-xl mt-5 shadow-lg">Submit</button>
+                        <button v-if="!isLoading" type="submit"
+                            class="bg-primary text-white font-bold py-2 px-5 rounded-xl mt-5 shadow-lg">Submit</button>
+                        <div v-else class="spinner"></div>
                     </div>
                 </form>
             </div>
@@ -77,8 +109,28 @@ const submit = () => {
 </template>
 
 <style>
-    input {
-        border: none;
-        outline: none;
+input {
+    border: none;
+    outline: none;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
     }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border: 4px solid #ED8000;
+    border-radius: 50%;
+    border-top-color: #FFFFFF;
+    animation: spin 1s ease-in-out infinite;
+}
 </style>

@@ -17,7 +17,7 @@ import Footer from './components/Footer.vue';
       </router-view>
     </div>
 
-    <Footer />
+    <Footer v-if="$route.name !== 'home' && $route.name !== 'services'" class="w-full" />
 
   </div>
 </template>
