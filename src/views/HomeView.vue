@@ -15,7 +15,7 @@ import lineImg from '@/assets/images/line6.svg'
       </div>
       <img :src="lineImg" alt="" class="mt-4">
       <p class="text-white mt-2 font-montserrat font-semibold text-xl">
-        I’m a professional Graphics / UI UX Designer with a zeal to transform ideas to reality. Test my skills and find out.
+        I’m a professional Graphics / UI UX Designer with a zeal to transform ideas into reality. Test my skills and find out.
       </p>
       <div class="w-full mt-10 flex flex-wrap gap-5 font-semibold">
         <router-link to="/" class="text-primary">Home</router-link>

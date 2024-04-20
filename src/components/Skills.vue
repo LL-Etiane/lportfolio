@@ -20,7 +20,7 @@ const skills = ref([
     <div :style="{ backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) ), url(${skillbg})` }" class="skills bg-no-repeat bg-cover py-10 px-10 text-white">
         <h1 class="text-primary text-center text-2xl uppercase font-bold underline underline-offset-8">Skills</h1>
         <p class="mt-5 text-center">
-            These skills are some of my top skills I have acquired and they will help give you a brief overview of the many ways I can use them to make your ideas become reality and just with the right budget. 
+            These are some of the top skills I have acquired and they will help give you a brief overview of the many ways I can use them to make your ideas become reality and just with the right budget
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">

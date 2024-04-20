@@ -5,19 +5,20 @@ import EducationComponent from '@/components/Education.vue'
 import Footer from '@/components/Footer.vue';
 
 const education = ref([
-    { name: 'LEVEL 6 DIPLOMA IN COMPUTING AND INFORMATION SYSTEMS', year: '2022 - 2023' },
-    { name: 'LEVEL 5 DIPLOMA IN COMPUTING AND INFORMATION SYSTEMS', year: '2021 - 2022' },
-    { name: 'LEVEL 4 DIPLOMA IN COMPUTING AND INFORMATION SYSTEMS', year: '2020 - 2021' },
+    { name: 'LEVEL 6 DIPLOMA IN COMPUTING AND INFORMATION SYSTEMS', year: '2022 - 2023', place: 'London Institute of InfoTech & Professional Training', qualification: 'ABMA QUALIFICATIONS' },
+    { name: 'LEVEL 5 DIPLOMA IN COMPUTING AND INFORMATION SYSTEMS', year: '2021 - 2022', place: 'London Institute of InfoTech & Professional Training', qualification: 'ABMA QUALIFICATIONS' },
+    { name: 'LEVEL 4 DIPLOMA IN COMPUTING AND INFORMATION SYSTEMS', year: '2020 - 2021', place: 'London Institute of InfoTech & Professional Training', qualification: 'ABMA QUALIFICATIONS' },
+    { name: 'GCE ADVANCED LEVEL (A Levels)', year: '2019', place: 'Goverment High Schol Bonadikombo (GHS)', qualification: ''},
+    { name: 'GCE ORDINARY LEVEL (O Levels)', year: '2017', place: 'Goverment High Schol Bonadikombo (GHS)', qualification: ''}
 ]);
 
 </script>
 <template>
-    <div class="relative">
-        <header :style="{ backgroundImage: `url(${headerBg})` }" class="min-h-[70vh] md:min-h-[60vh] bg-fixed bg-cover bg-center bg-no-repeat">
-        </header>
-        <div class="absolute top-2 w-full">
+    <div :style="{ backgroundImage: `url(${headerBg})` }" class="min-h-[100vh] md:min-h-[100vh] overflow-auto bg-cover bg-scroll bg-center bg-no-repeat relative">
+        
+        <div class="mt-3 w-full">
             <div class="px-3 md:px-36">
-                <section class="bg-black bg-opacity-80 text-white w-full py-3 px-5 rounded-lg">
+                <section class="bg-black bg-opacity-80 text-white w-full py-3 px-5 rounded-lg mb-4">
                     <div class="flex flex-col justify-center items-center">
                         <h1 class="text-primary font-bold text-2xl text-center uppercase">Resume</h1>
                         <hr class="text-primary bg-primary h-1 w-10 text-center">
@@ -48,7 +49,7 @@ const education = ref([
                                 <h1 class="text-primary font-bold text-xl uppercase">Education</h1>
                                 <div class="border-l-2 border-l-primary pl-5">
                                     <EducationComponent v-for="edu in education" :key="edu.name" :name="edu.name"
-                                        :year="edu.year" />
+                                        :year="edu.year" :place="edu.place" :qualification="edu.qualification" />
                                 </div>
                             </div>
                         </div>
@@ -115,10 +116,10 @@ const education = ref([
                             </div>
                         </div>
                     </div>
+                    <div class="flex justify-center my-3">
+                        <a href="https://drive.google.com/file/d/1YBieTVAK0RNnMSQYUTF8vN-p3gFr0z3O/view?usp=sharing" target="_blank" class="mt-2 inline-block bg-primary text-sm text-white font-bold py-2 px-3 rounded-md hover:bg-white hover:text-primary transition-colors duration-500 ease-in-out">Download Resume</a>
+                    </div>
                 </section>
-            </div>
-            <div class="mt-10">
-                <Footer class="w-full" style="padding: 25px;" />
             </div>
         </div>
     </div>

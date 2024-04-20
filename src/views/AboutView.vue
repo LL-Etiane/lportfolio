@@ -38,7 +38,7 @@ import TestimonialsComponent from '@/components/Testimonials.vue'
               <h1>
                 <span class="text-primary"><i class="fa-solid fa-greater-than fa-lg"></i> </span>
                 <span class="font-bold"> Degree: </span>
-                <span>Bachelor's Degree</span>
+                <span>Bachelor's degree in Computing and Information Systems</span>
               </h1>
             </div>
 
